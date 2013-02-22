@@ -6,6 +6,7 @@
 
 #include "JoystickDriver.c"
 #include "Drive Module.c"
+#define BTN_FIRE            7
 
 task main()
 {
@@ -14,7 +15,7 @@ task main()
 		getJoystickSettings(joystick);
 		Driver();
 
-		if(joy1Btn(7))
+		if(joy1Btn(BTN_FIRE))
 		{
 			motor [motorA] = 100;
 		}
